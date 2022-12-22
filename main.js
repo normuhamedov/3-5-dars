@@ -31,6 +31,7 @@ var elInputName = document.querySelector(".username");
 var elResult = document.querySelector(".result");
 var elCurency = document.querySelector(".curency");
 
+elResult.textContent = "11250";
 
 elForm.addEventListener("input", function(evt) {
     evt.preventDefault()
