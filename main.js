@@ -1,42 +1,35 @@
+let elForm = document.querySelector(".form");
+let elInputName = document.querySelector(".username");
+let elResult = document.querySelector(".result");
 
-// var studentName = prompt("Ismingiz");
-// var englishScore = prompt("Ingliz tili natijanggiz");
-// var mathScore = prompt("Matematika natijanggiz");
-
-// var isTanish = "Boboyor".toLocaleLowerCase() == studentName.toLocaleLowerCase()
-
-// var passScoreFromEnglish = 500;
-// var passScoreFromMath = 600;
- 
-// var mathIsPass = mathScore >= passScoreFromMath
-// var englishIsPass = englishScore >= passScoreFromEnglish
-
-// if ((englishIsPass && mathIsPass) || isTanish) {
-//     console.log("O'qishga kirdinggiz");
-
-// }else if(mathScore >= passScoreFromMath) {
-//     console.log("Matematikadan balinggiz yetarli ammo ingliz tilini bilmas ekansiz");
+elInputName.addEventListener("input", function() { 
     
-// }else if(englishScore >= passScoreFromEnglish) {
-//     console.log("Ingliz tilidan balinggiz yetarli ammo matematikani bilmas ekansiz");
-    
-// }else {
-//     console.log("Yana kirolmadinggiz");
-// }
+    var inputName = +elInputName.value
+    switch (inputName) {
+        case 1:
+        elResult.textContent = ("Dushanba");
+        break;
+        case 2:
+        elResult.textContent = ("Seshanba");
+        break;
+        case 3:
+        elResult.textContent = ("Chorshanba");
+        break
+        case 4:
+        elResult.textContent = ("Payshanba");
+        break;
+        case 5:
+        elResult.textContent = ("Juma");
+        break;
+        case 6:
+        elResult.textContent = ("Shanba");
+        break;
+        case 7:
+        elResult.textContent = ("Yakshanba");
+        break;
 
-
-
-var elForm = document.querySelector(".form");
-var elInputName = document.querySelector(".username");
-var elResult = document.querySelector(".result");
-var elCurency = document.querySelector(".curency");
-
-elResult.textContent = "11250";
-
-elForm.addEventListener("input", function(evt) {
-    evt.preventDefault()
-
-    var inputName = elInputName.value
-
-    elResult.textContent = inputName * elCurency.value
+        default:
+        elResult.textContent = ("1 dan 7 gacha son kiriting");
+        break;
+    }
 })
