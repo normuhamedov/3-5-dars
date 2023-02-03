@@ -35,3 +35,21 @@
     background-color: rgb(221, 96, 96);
     
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .all__wrapper {
+        max-width: 300px;
+        min-height: 400px;
+        padding-top: 50px;
+    }
+    .username {
+        width: 70%;
+        margin-top: 20px;
+    }
+    .result__wrapper {
+        margin-top: 50px;
+    }
+  }
